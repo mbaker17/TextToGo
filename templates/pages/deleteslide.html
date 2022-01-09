@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/slideshow.css' %}">
+</head>
+<body>
+
+    <center><h1>Delete Slide</h1></center>
+    <p>Are you sure you want to delete "{{item}}"?</p>
+    <form action="{% url 'delete_slides' item.id %}" method="POST">
+        {% csrf_token %}
+        <a href="{% url 'index' %}">Cancel</a>
+        <input type="submit" name="Confirm">
+    </form>
+
+
+    
+</body>
+</html>
+
+{% endblock %}

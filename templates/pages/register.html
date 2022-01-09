@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+
+	<div class="reg">
+		<h1>Register</h1>
+		<form method="POST" action="">
+		{% csrf_token %}
+		<ul>
+			<li>
+				<h2>Username</h2>
+				{{form.username}}
+			</li>
+			<li>
+				<h2>Email</h2>
+				{{form.email}}
+			</li>
+			<li>
+				<h2>Password</h2>
+				{{form.password1}}
+			</li>
+			<li>
+				<h2>Confirm Password</h2>
+				{{form.password2}}
+			</li>
+			{{form.errors}}
+			<li>
+				<input type="submit" name="Create User">
+			</li>
+			<li>
+				<a class="nav-link" href="{% url 'login' %}">Sign In</a>
+			</li>
+		</ul>
+		
+		</form>
+		</div>
+	
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/slideshow.css' %}">
+</head>
+
+<body>
+
+    <div class="slideedit">
+
+        <center>
+            <h2>Edit slideshow</h2>
+        </center>
+        <center><a href="{% url 'create_slideobject' %}">Create Slide Object</a></center>
+
+        <section class="boxes1">
+            {% for slide in slides %}
+            <div class="box1">
+                <a href={{slide.Url}}><img src="{{ slide.MainImage.url }}"></a>
+
+                <a href="{% url 'edit_slideshow' slide.id %}">Update</a>
+                <br>
+                <a href="{% url 'delete_slides' slide.id %}">Delete</a>
+            </div>
+            {% endfor %}
+        </section>
+
+        <center>
+            <h2>Preview</h2>
+        </center>
+
+        <iframe src="{% url 'slideshow' %}" title="description" scrolling="no"></iframe>
+
+    </div>
+
+    </div>
+
+</body>
+
+</html>
+
+{% endblock %}

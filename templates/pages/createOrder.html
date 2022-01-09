@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/createOrder.css' %}">
+</head>
+<body>
+
+<div class="ord">
+
+    <center><h1>Create Order</h1></center>
+
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <!-- {{form.as_p}} -->
+
+        <ul>
+            <li>
+                <h3>First Name</h3>
+                {{form.FirstName}}
+            </li>
+            <li>
+                <h3>Last Name</h3>
+                {{form.LastName}}
+            </li>
+            <li>
+                <h3>Email</h3>
+                {{form.Email}}
+            </li>
+            <li>
+                <h3>Confirmation Number</h3>
+                {{form.ConfirmNum}}
+            </li>
+            <li>
+                <input type="submit" name="Submit">
+            </li>
+        </ul>
+    </form>
+</div>
+
+    
+</body>
+</html>
+
+{% endblock %}
