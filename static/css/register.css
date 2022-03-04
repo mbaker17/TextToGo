@@ -1,4 +1,4 @@
-.reg{
+/* .reg{
 	text-align:center;
 	background-color: #f1f1f1;
 	margin-left:10%;
@@ -31,4 +31,27 @@
     background-position: 10px 10px; 
     background-repeat: no-repeat;
     padding: 12px 40px 12px 40px;
+  } */
+
+
+  .login {
+	min-height: 100vh;
   }
+  
+  .bg-image {
+	background-image: url('https://i.ytimg.com/vi/ZJwYQHZGmFc/maxresdefault.jpg');
+	/* background-image: url('https://live.staticflickr.com/23/27506457_28611aa302_b.jpg'); */
+	background-size: cover;
+	background-position: center;
+  }
+  
+  .login-heading {
+	font-weight: 300;
+  }
+  
+  .btn-login {
+	font-size: 0.9rem;
+	letter-spacing: 0.05rem;
+	padding: 0.75rem 1rem;
+  }
+  

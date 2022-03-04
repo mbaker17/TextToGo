@@ -5,6 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,42 +13,74 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="{% static 'css/register.css' %}">
 </head>
+
 <body>
 
-	<div class="reg">
-		<h1>Register</h1>
-		<form method="POST" action="">
-		{% csrf_token %}
-		<ul>
-			<li>
-				<h2>Username</h2>
-				{{form.username}}
-			</li>
-			<li>
-				<h2>Email</h2>
-				{{form.email}}
-			</li>
-			<li>
-				<h2>Password</h2>
-				{{form.password1}}
-			</li>
-			<li>
-				<h2>Confirm Password</h2>
-				{{form.password2}}
-			</li>
-			{{form.errors}}
-			<li>
-				<input type="submit" name="Create User">
-			</li>
-			<li>
-				<a class="nav-link" href="{% url 'login' %}">Sign In</a>
-			</li>
-		</ul>
-		
-		</form>
-		</div>
-	
+	<div class="container-fluid ps-md-0">
+        <div class="row g-0">
+            <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+            <div class="col-md-8 col-lg-6">
+                <div class="login d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-8 mx-auto">
+                                <h3 class="login-heading mb-4">Register</h3>
+
+                                <!-- Sign In Form -->
+                                <form method="POST" action="">
+                                    {% csrf_token %}
+                                    <div class="form-floating mb-3">
+                                        <label for="floatingInput">Username</label>
+										{{form.username}}
+                                    </div>
+									<div class="form-floating mb-3">
+                                        <label for="floatingInput">Email</label>
+										{{form.email}}
+                                    </div>
+									<div class="form-floating mb-3">
+                                        <label for="floatingInput">Password</label>
+										{{form.password1}}
+                                    </div>
+									<div class="form-floating mb-3">
+                                        <label for="floatingInput">Confirm Password</label>
+										{{form.password2}}
+                                    </div>
+
+                                    {{form.errors}}
+
+                                    <div class="d-grid">
+                                        <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2"
+											type="submit" name="Create User">Submit</button>
+                                    </div>
+
+									<a class="d-block text-center mt-2 small" href="{% url 'login' %}">Have an account? Sign In</a>
+
+							<hr class="my-4">
+
+							<!-- <div class="d-grid mb-2">
+								<button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+									<i class="fab fa-google me-2"></i> Sign up with Google
+								</button>
+							</div>
+
+							<div class="d-grid">
+								<button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+									<i class="fab fa-facebook-f me-2"></i> Sign up with Facebook
+								</button>
+							</div> -->
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
 
 {% endblock %}

@@ -1,42 +1,13 @@
-.ord{
-	/* text-align:center; */
-	background-color: #f1f1f1;
-	margin-left:10%;
-	margin-right:10%;
-	margin-top:20px;
+ul{
+	list-style-type:none;
 }
 
-.ord form{
-	text-align: center;
-}
-
-.ord h1{
-	text-align:center;
-	border-bottom:3px solid black;
-	margin-left:15%;
-	margin-right:15%;
-}
-
-.ord ul{
-	list-style: none;
-	padding-bottom:10px;
-}
-
-.ord li{
-	padding-top:5px;
-}
-
-.ord input {
-	max-width:60%;
-	min-width:30%;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    padding: 12px 0px 12px 0px;
+.boxes {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
   }
-
-  .ord .Submit{
-    padding: 50% 0px 50% 0px;
+  
+  .box {
+    text-align: center;
   }

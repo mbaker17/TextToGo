@@ -1,3 +1,7 @@
+ul{
+	list-style-type:none;
+}
+
 .boxes {
     display: grid;
     grid-gap: 20px;
@@ -6,34 +10,13 @@
   
   .box {
     text-align: center;
-    background-color: #f1f1f1;
-    padding-left:5%;
-    padding-right:5%;
   }
 
-  .box li{
-      display: inline;
+  .sectionDate{
+      text-align:center;
   }
 
-  .button {
-    padding-top:10px;
-  }
-
-  .selectDate {
-    padding-left:15%;
-    padding-right:15%;
-    padding-top:10px;
-  }
-
-  table, th, td {
-    border: 1px solid black;
-  }
-
-  table {
-    width: 100%;
-  }
-
-  input.button2{
+  a.button2{
     display:inline-block;
     padding:0.5em 3em;
     border:0.16em solid #333;
@@ -47,18 +30,17 @@
     text-align:center;
     transition: all 0.15s;
     }
-    input.button2:hover{
+    a.button2:hover{
     color:#DDDDDD;
     border-color:#DDDDDD;
     }
-    input.button2:active{
+    a.button2:active{
     color:#BBBBBB;
     border-color:#BBBBBB;
     }
     @media all and (max-width:30em){
-    input.button2{
+    a.button2{
     display:block;
     margin:0.4em auto;
     }
 }
-  

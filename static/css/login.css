@@ -1,5 +1,4 @@
-.log{
-	/* text-align:center; */
+/* .log{
 	background-color: #f1f1f1;
 	margin-left:10%;
 	margin-right:10%;
@@ -35,4 +34,26 @@
     font-size: 16px;
     background-color: white;
     padding: 12px 0px 12px 0px;
+  } */
+
+  .login {
+	min-height: 100vh;
   }
+  
+  .bg-image {
+	background-image: url('https://i.ytimg.com/vi/ZJwYQHZGmFc/maxresdefault.jpg');
+	/* background-image: url('https://live.staticflickr.com/23/27506457_28611aa302_b.jpg'); */
+	background-size: cover;
+	background-position: center;
+  }
+  
+  .login-heading {
+	font-weight: 300;
+  }
+  
+  .btn-login {
+	font-size: 0.9rem;
+	letter-spacing: 0.05rem;
+	padding: 0.75rem 1rem;
+  }
+  

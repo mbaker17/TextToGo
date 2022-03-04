@@ -1,0 +1,68 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/selectDate.css' %}">
+</head>
+<body>
+
+    <center><h1>Select Date: {{qdate}}</h1></center>
+
+    <div class="datesection">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input class="form-control" type="date" placeholder="" name="selectdate">
+            <input type="submit" name="dateSubmit">
+        </form>
+    </div>
+
+    <section class="boxes">
+        <div class="box">
+            <h3>{{oned}}</h3>
+            <a href="something" class="button2">{{one}}</a>
+        </div>
+        <div class="box">
+            <h3>{{two}}</h3>
+            <h3>{{twod}}</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo harum impedit provident recusandae accusantium asperiores placeat nobis nisi quos aliquid?</p>
+        </div>
+        <div class="box">
+            <h3>{{three}}</h3>
+            <h3>{{threed}}</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo harum impedit provident recusandae accusantium asperiores placeat nobis nisi quos aliquid?</p>
+        </div>
+        <div class="box">
+            <h3>{{four}}</h3>
+            <h3>{{fourd}}</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo harum impedit provident recusandae accusantium asperiores placeat nobis nisi quos aliquid?</p>
+        </div>
+        <div class="box">
+            <h3>{{five}}</h3>
+            <h3>{{fived}}</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo harum impedit provident recusandae accusantium asperiores placeat nobis nisi quos aliquid?</p>
+        </div>
+        <div class="box">
+            <h3>{{six}}</h3>
+            <h3>{{sixd}}</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo harum impedit provident recusandae accusantium asperiores placeat nobis nisi quos aliquid?</p>
+        </div>
+        <div class="box">
+            <h3>{{seven}}</h3>
+            <h3>{{sevend}}</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo harum impedit provident recusandae accusantium asperiores placeat nobis nisi quos aliquid?</p>
+        </div>
+    </section>
+    
+</body>
+</html>
+
+{% endblock %}

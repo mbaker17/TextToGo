@@ -15,12 +15,11 @@
 </head>
 <body>
 
-    <center><h1>Create Order</h1></center>
+    <center><h1 style="background-color:{{ color }}">Edit Order</h1></center>
 
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <!-- {{form.as_p}} -->
-
         <ul>
             <li>
                 <h3>First Name</h3>
@@ -40,17 +39,35 @@
             </li>
             <i>Be sure this is the correct confirmation number!</i>
             <li>
-                <h3>Time Slot</h3>
-                {{ form.get_Timeslot_display }}
-                {{ form.Timeslot }}
+                <h3>Date</h3>
+                {{form.date}}
             </li>
-            <!-- {{form}} -->
+            <li>
+                <h3>Time Slot</h3>
+                {{form.timeslot}}
+            </li>
+            <li>
+                <h3>Bag Pulled</h3>
+                {{form.BagPulled}}
+            </li>
+            <li>
+                <h3>Bag Picked Up</h3>
+                {{form.BagPickedUp}}
+            </li>
+            <li>
+                <h3>Missed Pick Up</h3>
+                {{form.MissedPickUp}}
+            </li>
+            <li>
+                <h3>Invalid Confirmation Number</h3>
+                {{form.InvalidConfirmNum}}
+            </li>
             <li>
                 <input type="submit" name="Submit">
             </li>
         </ul>
-    </form>  
-    
+    </form>
+
 </body>
 </html>
 
